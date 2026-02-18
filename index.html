@@ -196,7 +196,7 @@
 
     <footer style="background:var(--dark);color:white;padding:40px 5%;text-align:center">
         <p style="font-size:1.2rem;font-weight:700">?? GRUP KARYA</p>
-        <p style="opacity:.7;margin-top:10px">© 2026 Platform Kolaborasi Mahasiswa</p>
+        <p style="opacity:.7;margin-top:10px">Â© 2026 Platform Kolaborasi Mahasiswa</p>
     </footer>
 <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal-overlay">
@@ -540,7 +540,7 @@
                         <span style="color:var(--text-primary);font-size:.9rem;font-weight:600" id="badgePreviewNameSmall">Nama Lencana</span>
                     </div>
                     <div style="margin-top:20px;padding:15px;background:var(--bg-main);border-radius:12px;border:2px dashed var(--border-color);width:100%;font-size:.85rem;color:var(--text-secondary)">
-                        ?? <strong>Tips:</strong><br>• Emoji untuk lencana ringan<br>• Foto untuk lencana spesial<br>• Pilih warna yang kontras
+                        ?? <strong>Tips:</strong><br>Â• Emoji untuk lencana ringan<br>Â• Foto untuk lencana spesial<br>Â• Pilih warna yang kontras
                     </div>
                 </div>
             </div>
@@ -905,7 +905,7 @@ async function goToJoinList() {
                  onmouseout="this.style.background='transparent'"
                  onclick="selectTeam(${t.id},this)">
                 <div style="font-weight:700">${t.name}</div>
-                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus} • ${t.points} poin • ${members.length} anggota</div>
+                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus} Â• ${t.points} poin Â• ${members.length} anggota</div>
             </div>`;
     });
     if (!data?.length) container.innerHTML = '<p style="text-align:center;padding:20px;color:var(--text-secondary)">Belum ada tim tersedia</p>';
@@ -1149,7 +1149,7 @@ function createPostCard(post) {
             <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--primary),#667eea);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;flex-shrink:0">${av}</div>
             <div class="post-user-info">
                 <div class="post-user-name">${post.author_name}</div>
-                <div class="post-user-meta">${post.author_team} • ${getTimeAgo(post.timestamp)}</div>
+                <div class="post-user-meta">${post.author_team} Â• ${getTimeAgo(post.timestamp)}</div>
             </div>
             ${canDelete ? `<button class="post-delete-btn" onclick="deletePost(${post.id})">??? Hapus</button>` : ''}
         </div>
@@ -1464,7 +1464,7 @@ function renderTeamMembers(teamName) {
             <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px dotted var(--border-color)">
                 <div>
                     <span style="color:var(--text-primary);font-weight:600">${m.name}</span>${isSelf}
-                    <div style="font-size:.8rem;color:var(--text-secondary);margin-top:2px">NIM: ${m.nim} • ${m.points} poin</div>
+                    <div style="font-size:.8rem;color:var(--text-secondary);margin-top:2px">NIM: ${m.nim} Â• ${m.points} poin</div>
                 </div>
                 <span class="${role==='Ketua'?'role-ketua':'role-anggota'}">${role}</span>
             </div>`;
@@ -2300,7 +2300,7 @@ async function adminDeleteTeam() {
         div.innerHTML = `
             <div>
                 <div style="font-weight:700;color:var(--text-primary)">${t.name}</div>
-                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus} • ${t.points} poin • ${members} anggota</div>
+                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus} Â• ${t.points} poin Â• ${members} anggota</div>
             </div>
             <button onclick="confirmDeleteTeam(${t.id})" style="padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">??? Hapus</button>`;
         container.appendChild(div);
@@ -2378,7 +2378,7 @@ async function adminDeletePost() {
             <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
                 <div style="flex:1">
                     <div style="font-weight:700;color:var(--text-primary)">${p.author_name}</div>
-                    <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:8px">${p.author_team} • ${getTimeAgo(p.timestamp)}</div>
+                    <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:8px">${p.author_team} Â• ${getTimeAgo(p.timestamp)}</div>
                     <div style="color:var(--text-primary);font-size:.9rem;line-height:1.5">${p.content ? (p.content.length>100?p.content.substring(0,100)+'...':p.content) : '<em style="color:var(--text-secondary)">Hanya foto</em>'}</div>
                     ${p.image?'<div style="margin-top:6px;font-size:.8rem;color:var(--primary)">?? Ada foto</div>':''}
                 </div>
@@ -2440,4 +2440,5 @@ async function downloadExcelData() {
 window.onload = init;
     </script>
 </body>
+
 </html>
