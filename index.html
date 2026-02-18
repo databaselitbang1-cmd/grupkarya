@@ -112,19 +112,19 @@
     </div>
 
     <nav>
-        <div class="logo" onclick="scrollToSection('home')">?? GRUP KARYA</div>
+        <div class="logo" onclick="scrollToSection('home')">GRUP KARYA</div>
         <div class="nav-links">
-            <a onclick="scrollToSection('beranda')">?? Beranda</a>
-            <a onclick="openTeamListModal()">?? Tim</a>
-            <a onclick="scrollToSection('leaderboard')">?? Klasemen</a>
-            <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">??</button>
+            <a onclick="scrollToSection('beranda')">📘Beranda</a>
+            <a onclick="openTeamListModal()">👥Tim</a>
+            <a onclick="scrollToSection('leaderboard')">🏆Klasemen</a>
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle"></button>
             <div id="navGuest" style="display:flex;gap:12px">
                 <button onclick="openLoginModal()" class="btn-nav">Masuk</button>
                 <button onclick="openRegisterModal()" class="btn-nav">Daftar</button>
             </div>
             <div id="navUser" style="display:none">
                 <div class="user-pill" id="userPillBtn" onclick="openUserProfile()">
-                    ?? <span id="navUserName">User</span>
+                    MODE <span id="navUserName">User</span>
                 </div>
             </div>
         </div>
@@ -133,13 +133,13 @@
     <header id="home">
         <h1>Dari Minat, Jadi Karya Nyata</h1>
         <p style="font-size:1.3rem;opacity:.9">Platform kolaborasi mahasiswa dengan FYP Algorithm</p>
-        <button onclick="checkLoginAction()" class="btn-nav" style="font-size:1.1rem;padding:14px 40px;margin-top:25px">?? Mulai Sekarang</button>
+        <button onclick="checkLoginAction()" class="btn-nav" style="font-size:1.1rem;padding:14px 40px;margin-top:25px">▶️Mulai Sekarang</button>
     </header>
 
     <section id="beranda">
         <div class="card">
             <div class="stats-header">
-                <h2 class="stats-title">?? Perkembangan Poin</h2>
+                <h2 class="stats-title">📊📊Perkembangan Poin</h2>
                 <div class="time-filter">
                     <button class="time-filter-btn active" onclick="changeTimeFilter('weekly',event)">Mingguan</button>
                     <button class="time-filter-btn" onclick="changeTimeFilter('monthly',event)">Bulanan</button>
@@ -161,16 +161,16 @@
                     </div>
                 </div>
                 <div class="create-post-actions">
-                    <button class="btn-upload" onclick="document.getElementById('fileInput').click()">?? Upload Foto</button>
+                    <button class="btn-upload" onclick="document.getElementById('fileInput').click()">🖼️Upload Foto</button>
                     <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="previewImage(event)">
-                    <button class="btn-post" onclick="createPost()">?? Posting</button>
+                    <button class="btn-post" onclick="createPost()">📥Posting</button>
                 </div>
             </div>
         </div>
 
         <div id="loginPromptSection" style="display:none">
             <div style="background:#fff3cd;border:3px dashed var(--warning);border-radius:16px;padding:40px;text-align:center;margin-bottom:30px">
-                <h3 style="color:#856404;font-size:1.8rem;margin-bottom:15px">?? Login untuk Berbagi Karya</h3>
+                <h3 style="color:#856404;font-size:1.8rem;margin-bottom:15px">Login untuk Berbagi Karya</h3>
                 <p style="color:#856404">Bergabung dan bagikan karyamu!</p>
                 <button class="btn-nav" onclick="openLoginModal()" style="margin-top:15px;padding:12px 32px">Masuk Sekarang</button>
             </div>
@@ -180,7 +180,7 @@
 
     <section id="leaderboard" style="background:var(--bg-main);padding-top:80px;padding-bottom:80px">
         <div style="max-width:1400px;margin:0 auto;padding:0 5%">
-            <h2 class="section-title">?? Klasemen Tim</h2>
+            <h2 class="section-title">🏆Klasemen Tim</h2>
             <div style="overflow-x:auto">
                 <table><thead><tr><th>Rank</th><th>Tim</th><th>Fokus</th><th>Lencana</th><th>Poin</th></tr></thead><tbody id="teamTableBody"></tbody></table>
             </div>
@@ -195,18 +195,18 @@
     </section>
 
     <footer style="background:var(--dark);color:white;padding:40px 5%;text-align:center">
-        <p style="font-size:1.2rem;font-weight:700">?? GRUP KARYA</p>
+        <p style="font-size:1.2rem;font-weight:700">GRUP KARYA</p>
         <p style="opacity:.7;margin-top:10px">© 2026 Platform Kolaborasi Mahasiswa</p>
     </footer>
 <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('loginModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:30px;color:var(--primary)">?? Masuk ke Akun</h2>
+            <h2 style="text-align:center;margin-bottom:30px;color:var(--primary)">Masuk ke Akun</h2>
             <div id="loginAlert"></div>
             <div class="form-group"><label>NIM</label><input type="text" id="loginNim" placeholder="Contoh: 12345678" onkeypress="if(event.key==='Enter')processLogin()"></div>
             <div class="form-group"><label>Password</label><input type="password" id="loginPass" placeholder="Masukkan password" onkeypress="if(event.key==='Enter')processLogin()"></div>
-            <button class="btn-full" onclick="processLogin()">?? Masuk</button>
+            <button class="btn-full" onclick="processLogin()">Masuk</button>
             <p style="text-align:center;margin-top:20px;color:var(--text-secondary)">
                 Belum punya akun? <a onclick="switchModal('loginModal','registerModal')" style="color:var(--primary);cursor:pointer;font-weight:700">Daftar di sini</a>
             </p>
@@ -218,7 +218,7 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('registerModal')">&times;</button>
             <div id="regStep1" class="form-step active">
-                <h3 style="margin-bottom:5px;color:var(--text-primary)">?? Langkah 1/3</h3>
+                <h3 style="margin-bottom:5px;color:var(--text-primary)">Langkah 1/3</h3>
                 <p style="color:var(--text-secondary);margin-bottom:20px">Data Diri</p>
                 <div id="regAlert"></div>
                 <div class="form-group"><label>Nama Lengkap *</label><input type="text" id="regNama" placeholder="Budi Santoso"></div>
@@ -227,7 +227,7 @@
                 <button class="btn-full" onclick="regNext1()">Lanjut ?</button>
             </div>
             <div id="regStep2" class="form-step">
-                <h3 style="margin-bottom:5px;color:var(--text-primary)">?? Langkah 2/3</h3>
+                <h3 style="margin-bottom:5px;color:var(--text-primary)"> Langkah 2/3</h3>
                 <p style="color:var(--text-secondary);margin-bottom:20px">Keamanan Akun</p>
                 <div id="regAlert2"></div>
                 <div class="form-group"><label>Password * (min 6 karakter)</label><input type="password" id="regPass" placeholder="Minimal 6 karakter"></div>
@@ -240,17 +240,17 @@
                 <button class="btn-full" style="background:var(--gray);margin-top:8px" onclick="showStep('regStep1')">? Kembali</button>
             </div>
             <div id="regStep3" class="form-step">
-                <h3 style="margin-bottom:5px;color:var(--text-primary)">?? Langkah 3/3</h3>
+                <h3 style="margin-bottom:5px;color:var(--text-primary)"> Langkah 3/3</h3>
                 <p style="color:var(--text-secondary);margin-bottom:20px">Pilih Tim</p>
                 <div style="background:var(--bg-main);padding:20px;border-radius:12px;margin-bottom:20px">
                     <p style="color:var(--text-secondary);font-size:.9rem">Halo <strong id="regNamaPreview" style="color:var(--primary)">-</strong>! Pilih bergabung ke tim yang ada atau buat tim baru.</p>
                 </div>
-                <button class="btn-full" style="background:var(--bg-card);color:var(--primary);border:2px solid var(--primary);margin-bottom:10px" onclick="goToJoinList()">?? Bergabung ke Tim yang Ada</button>
+                <button class="btn-full" style="background:var(--bg-card);color:var(--primary);border:2px solid var(--primary);margin-bottom:10px" onclick="goToJoinList()"> Bergabung ke Tim yang Ada</button>
                 <button class="btn-full" style="background:var(--success)" onclick="showStep('panelCreateTeam')">? Buat Tim Baru</button>
                 <button class="btn-full" style="background:var(--gray);margin-top:8px" onclick="showStep('regStep2')">? Kembali</button>
             </div>
             <div id="panelJoinTeam" class="form-step">
-                <h3 style="margin-bottom:20px;color:var(--text-primary)">?? Pilih Tim</h3>
+                <h3 style="margin-bottom:20px;color:var(--text-primary)"> Pilih Tim</h3>
                 <div id="joinListContainer" style="height:300px;overflow-y:auto;border:2px solid var(--border-color);border-radius:12px;padding:10px;margin:15px 0;background:var(--bg-main)"></div>
                 <button class="btn-full" style="background:var(--success)" onclick="finalJoinTeam()">? Konfirmasi Bergabung</button>
                 <button class="btn-full" style="background:var(--gray);margin-top:8px" onclick="showStep('regStep3')">? Kembali</button>
@@ -261,7 +261,7 @@
                 <div class="form-group"><label>Fokus Kegiatan *</label><input type="text" id="newTeamFocus" placeholder="Film & Media"></div>
                 <div class="form-group"><label>Visi & Misi</label><textarea id="newTeamVisi" rows="3" placeholder="Menjadi tim terbaik..."></textarea></div>
                 <div class="form-group"><label>Arah Pengembangan</label><input type="text" id="newTeamDev" placeholder="Produksi Film Pendek"></div>
-                <button class="btn-full" style="background:var(--success)" onclick="finalCreateTeam()">?? Buat Tim & Daftar</button>
+                <button class="btn-full" style="background:var(--success)" onclick="finalCreateTeam()"> Buat Tim & Daftar</button>
                 <button class="btn-full" style="background:var(--gray);margin-top:8px" onclick="showStep('regStep3')">? Kembali</button>
             </div>
         </div>
@@ -275,19 +275,19 @@
             <!-- ADMIN PANEL -->
             <div id="adminPanelSection" style="display:none;padding:40px">
                 <div style="background:linear-gradient(135deg,#dc3545,#c82333);color:#fff;padding:30px;border-radius:16px">
-                    <h2 style="margin-bottom:10px">????? ADMIN PANEL</h2>
+                    <h2 style="margin-bottom:10px">? ADMIN PANEL</h2>
                     <p style="opacity:.9;margin-bottom:20px">Akses penuh sistem</p>
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px">
                         <button onclick="adminAddPoints()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">? Tambah Poin</button>
-                        <button onclick="adminAddBadge()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">?? Kirim Lencana</button>
-                        <button onclick="openDesainLencana()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">?? Desain Lencana</button>
-                        <button onclick="lihatDaftarLencana()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">?? Daftar Lencana</button>
-                        <button onclick="downloadExcelData()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">?? Download Excel</button>
-                        <button onclick="adminDeleteTeam()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">??? Hapus Tim</button>
-                        <button onclick="adminDeleteUser()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">?? Hapus User</button>
-                        <button onclick="adminDeletePost()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">?? Hapus Post</button>
+                        <button onclick="adminAddBadge()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer"> Kirim Lencana</button>
+                        <button onclick="openDesainLencana()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer"> Desain Lencana</button>
+                        <button onclick="lihatDaftarLencana()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer"> Daftar Lencana</button>
+                        <button onclick="downloadExcelData()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer"> Download Excel</button>
+                        <button onclick="adminDeleteTeam()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer">? Hapus Tim</button>
+                        <button onclick="adminDeleteUser()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer"> Hapus User</button>
+                        <button onclick="adminDeletePost()" style="background:#fff;color:#dc3545;padding:15px;border:none;border-radius:12px;font-weight:700;cursor:pointer"> Hapus Post</button>
                     </div>
-                    <button class="btn-full" style="background:rgba(0,0,0,.3);margin-top:25px;border:2px solid rgba(255,255,255,.3)" onclick="processLogout()">?? Keluar Admin</button>
+                    <button class="btn-full" style="background:rgba(0,0,0,.3);margin-top:25px;border:2px solid rgba(255,255,255,.3)" onclick="processLogout()"> Keluar Admin</button>
                 </div>
             </div>
 
@@ -305,7 +305,7 @@
                     <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:2px solid var(--border-color)">
                         <div style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:20px;display:flex;align-items:center;gap:10px">
                             <span style="width:4px;height:25px;background:var(--primary);border-radius:2px;display:inline-block"></span>
-                            ?? Informasi Profil
+                             Informasi Profil
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
                             <div><div style="font-size:.85rem;color:var(--text-secondary);font-weight:600;margin-bottom:5px">Tim & Jabatan</div><div id="cvTeamRole" style="font-weight:500;color:var(--text-primary)">-</div></div>
@@ -316,16 +316,16 @@
                     <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:2px solid var(--border-color)">
                         <div style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:20px;display:flex;align-items:center;gap:10px">
                             <span style="width:4px;height:25px;background:var(--primary);border-radius:2px;display:inline-block"></span>
-                            ?? Prestasi
+                             Prestasi
                         </div>
                         <div id="cvAchievements"><p style="color:var(--text-secondary);text-align:center;padding:20px">Belum ada prestasi</p></div>
                     </div>
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
-                        <button class="btn-full" style="margin-top:0;background:var(--gray)" onclick="downloadCV()">?? Download CV</button>
-                        <button class="btn-full" style="margin-top:0;background:var(--purple)" onclick="openEditProfile()">?? Edit Profil</button>
+                        <button class="btn-full" style="margin-top:0;background:var(--gray)" onclick="downloadCV()"> Download CV</button>
+                        <button class="btn-full" style="margin-top:0;background:var(--purple)" onclick="openEditProfile()"> Edit Profil</button>
                     </div>
-                    <button class="btn-full" style="margin-top:12px" onclick="openMyTeamPage()">?? Laman Tim Saya</button>
-                    <button class="btn-full" style="background:var(--danger);margin-top:12px" onclick="processLogout()">?? Keluar</button>
+                    <button class="btn-full" style="margin-top:12px" onclick="openMyTeamPage()"> Laman Tim Saya</button>
+                    <button class="btn-full" style="background:var(--danger);margin-top:12px" onclick="processLogout()"> Keluar</button>
                 </div>
             </div>
         </div>
@@ -335,15 +335,15 @@
     <div id="editProfileModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('editProfileModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:20px;color:var(--primary)">?? Edit Profil</h2>
+            <h2 style="text-align:center;margin-bottom:20px;color:var(--primary)"> Edit Profil</h2>
             <div class="logo-upload-area" onclick="document.getElementById('profilePhotoInput').click()">
                 <div id="editProfilePreview" style="width:100px;height:100px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-weight:700;margin:0 auto 12px;overflow:hidden"><span id="editProfileText">A</span></div>
-                <p style="color:var(--primary);font-weight:700">?? Klik untuk ubah foto profil</p>
+                <p style="color:var(--primary);font-weight:700"> Klik untuk ubah foto profil</p>
             </div>
             <input type="file" id="profilePhotoInput" accept="image/*" style="display:none" onchange="previewProfilePhoto(event)">
             <div class="form-group" style="margin-top:20px"><label>Nama Lengkap</label><input type="text" id="editName"></div>
             <div class="form-group"><label>Kelas</label><input type="text" id="editKelas" placeholder="TI-3A"></div>
-            <button class="btn-full" style="background:var(--success)" onclick="saveProfile()">?? Simpan Perubahan</button>
+            <button class="btn-full" style="background:var(--success)" onclick="saveProfile()"> Simpan Perubahan</button>
             <button class="btn-full" style="background:var(--gray);margin-top:8px" onclick="closeModal('editProfileModal')">Batal</button>
         </div>
     </div>
@@ -352,7 +352,7 @@
     <div id="teamListModal" class="modal-overlay">
         <div class="modal-content modal-large">
             <button class="close-btn" onclick="closeModal('teamListModal')">&times;</button>
-            <h2 style="text-align:center;color:var(--gold);margin-bottom:30px">?? Daftar Semua Tim</h2>
+            <h2 style="text-align:center;color:var(--gold);margin-bottom:30px"> Daftar Semua Tim</h2>
             <div class="team-grid" id="allTeamsGrid"></div>
         </div>
     </div>
@@ -369,9 +369,9 @@
                     </div>
                     <div id="detailBadges" style="display:flex;gap:8px;justify-content:center;margin-top:15px;flex-wrap:wrap"></div>
                     <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
-                        <button class="btn-icon" id="joinOrChatBtn" onclick="handleJoinOrChat()" style="width:100%"><span id="joinBtnText">?? Bergabung</span></button>
-                        <button class="btn-icon" onclick="shareTeamLink()" style="width:100%;background:var(--purple)">?? Share</button>
-                        <button class="btn-icon" id="leaveTeamBtn" style="background:var(--danger);display:none;width:100%" onclick="leaveTeam()">?? Keluar Tim</button>
+                        <button class="btn-icon" id="joinOrChatBtn" onclick="handleJoinOrChat()" style="width:100%"><span id="joinBtnText"> Bergabung</span></button>
+                        <button class="btn-icon" onclick="shareTeamLink()" style="width:100%;background:var(--purple)"> Share</button>
+                        <button class="btn-icon" id="leaveTeamBtn" style="background:var(--danger);display:none;width:100%" onclick="leaveTeam()"> Keluar Tim</button>
                     </div>
                 </div>
                 <div>
@@ -382,23 +382,23 @@
                 </div>
             </div>
             <div style="display:flex;border-bottom:3px solid var(--border-color);margin-bottom:30px;overflow-x:auto">
-                <button class="tab-btn active" onclick="switchTeamTab('info')">?? Info</button>
-                <button class="tab-btn" onclick="switchTeamTab('members')">?? Anggota</button>
-                <button class="tab-btn" onclick="switchTeamTab('activities')">?? Log</button>
-                <button class="tab-btn" onclick="switchTeamTab('chat')">?? Chat</button>
-                <button class="tab-btn" id="manageTab" onclick="switchTeamTab('manage')" style="display:none">?? Kelola</button>
+                <button class="tab-btn active" onclick="switchTeamTab('info')"> Info</button>
+                <button class="tab-btn" onclick="switchTeamTab('members')"> Anggota</button>
+                <button class="tab-btn" onclick="switchTeamTab('activities')"> Log</button>
+                <button class="tab-btn" onclick="switchTeamTab('chat')"> Chat</button>
+                <button class="tab-btn" id="manageTab" onclick="switchTeamTab('manage')" style="display:none"> Kelola</button>
             </div>
-            <div id="tabInfo" style="display:block"><h4 style="color:var(--primary);margin-bottom:10px">?? Arah Pengembangan</h4><p id="detailDev" style="color:var(--text-primary)">-</p></div>
-            <div id="tabMembers" style="display:none"><h4 style="color:var(--primary);margin-bottom:10px">?? Daftar Anggota</h4><div id="membersList"></div></div>
+            <div id="tabInfo" style="display:block"><h4 style="color:var(--primary);margin-bottom:10px"> Arah Pengembangan</h4><p id="detailDev" style="color:var(--text-primary)">-</p></div>
+            <div id="tabMembers" style="display:none"><h4 style="color:var(--primary);margin-bottom:10px"> Daftar Anggota</h4><div id="membersList"></div></div>
             <div id="tabActivities" style="display:none">
-                <h4 style="color:var(--primary);margin-bottom:10px">?? Riwayat Kegiatan</h4>
+                <h4 style="color:var(--primary);margin-bottom:10px"> Riwayat Kegiatan</h4>
                 <div style="overflow-x:auto"><table><thead><tr><th>Kegiatan</th><th>Tanggal</th></tr></thead><tbody id="activityLogBody"></tbody></table></div>
             </div>
             <div id="tabChat" style="display:none">
-                <div id="chatAccessDenied" style="background:#ffe6e6;padding:25px;text-align:center;border-radius:12px;color:var(--danger);display:none"><h3>?? Chat hanya untuk anggota tim</h3></div>
+                <div id="chatAccessDenied" style="background:#ffe6e6;padding:25px;text-align:center;border-radius:12px;color:var(--danger);display:none"><h3> Chat hanya untuk anggota tim</h3></div>
                 <div id="chatAccessGranted" style="display:none">
                     <div style="background:var(--bg-card);border:2px solid var(--border-color);border-radius:16px;height:450px;display:flex;flex-direction:column">
-                        <div style="background:var(--primary);color:#fff;padding:15px 20px;border-radius:14px 14px 0 0;font-weight:700">?? Chat Tim - <span id="chatTeamName">Tim</span></div>
+                        <div style="background:var(--primary);color:#fff;padding:15px 20px;border-radius:14px 14px 0 0;font-weight:700"> Chat Tim - <span id="chatTeamName">Tim</span></div>
                         <div id="chatMessages" style="flex:1;padding:15px;overflow-y:auto;background:var(--bg-main)"></div>
                         <div style="display:flex;padding:12px;border-top:2px solid var(--border-color);gap:10px;background:var(--bg-card);border-radius:0 0 14px 14px">
                             <input type="text" id="chatInput" placeholder="Ketik pesan..." style="flex:1;padding:10px 18px;border:2px solid var(--border-color);background:var(--bg-main);color:var(--text-primary);border-radius:25px" onkeypress="if(event.key==='Enter')sendMessage()">
@@ -409,7 +409,7 @@
             </div>
             <div id="tabManage" style="display:none">
                 <div style="padding:20px;background:var(--bg-main);border:2px dashed var(--warning);border-radius:12px">
-                    <h4 style="color:var(--text-primary);margin-bottom:15px">?? Kelola Anggota Tim</h4>
+                    <h4 style="color:var(--text-primary);margin-bottom:15px"> Kelola Anggota Tim</h4>
                     <div id="manageMembers"></div>
                 </div>
             </div>
@@ -420,18 +420,18 @@
     <div id="teamSettingsModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('teamSettingsModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:20px;color:var(--warning)">?? Pengaturan Tim</h2>
+            <h2 style="text-align:center;margin-bottom:20px;color:var(--warning)"> Pengaturan Tim</h2>
             <div class="logo-upload-area" onclick="document.getElementById('teamLogoInput').click()">
                 <div id="teamLogoPreview" style="width:100px;height:100px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 12px;font-weight:700;overflow:hidden"><span id="teamLogoText">TM</span></div>
-                <p style="color:var(--primary);font-weight:700">?? Klik untuk upload logo tim</p>
+                <p style="color:var(--primary);font-weight:700"> Klik untuk upload logo tim</p>
             </div>
             <input type="file" id="teamLogoInput" accept="image/*" style="display:none" onchange="previewTeamLogo(event)">
             <div class="form-group" style="margin-top:15px"><label>Nama Tim</label><input type="text" id="settingsName"></div>
             <div class="form-group"><label>Visi & Misi</label><textarea id="settingsVisi" rows="3"></textarea></div>
             <div class="form-group"><label>Fokus Kegiatan</label><input type="text" id="settingsFocus"></div>
             <div class="form-group"><label>Arah Pengembangan</label><input type="text" id="settingsDev"></div>
-            <div class="form-group"><label>?? Aktifkan Lencana (Max 3)</label><div id="settingsBadgesList" style="margin-top:8px"></div></div>
-            <button class="btn-full" style="background:var(--success)" onclick="saveTeamSettings()">?? Simpan Pengaturan</button>
+            <div class="form-group"><label> Aktifkan Lencana (Max 3)</label><div id="settingsBadgesList" style="margin-top:8px"></div></div>
+            <button class="btn-full" style="background:var(--success)" onclick="saveTeamSettings()"> Simpan Pengaturan</button>
         </div>
     </div>
 
@@ -459,7 +459,7 @@
     <div id="addBadgeModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('addBadgeModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:20px;color:var(--warning)">?? Kirim Lencana ke Tim</h2>
+            <h2 style="text-align:center;margin-bottom:20px;color:var(--warning)"> Kirim Lencana ke Tim</h2>
             <div class="form-group"><label>Pilih Tim *</label><select id="badgeTeamSelect"><option value="">-- Pilih Tim --</option></select></div>
             <div class="form-group"><label>Pilih Lencana *</label><select id="badgeTypeSelect"><option value="">-- Pilih Lencana --</option></select></div>
             <div id="badgePreviewBox" style="display:none;margin:15px 0;padding:15px;background:var(--bg-main);border-radius:12px;text-align:center">
@@ -474,7 +474,7 @@
     <div id="desainLencanaModal" class="modal-overlay">
         <div class="modal-content modal-large" style="max-width:750px">
             <button class="close-btn" onclick="closeModal('desainLencanaModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:5px;color:var(--primary)">?? Desain Lencana Baru</h2>
+            <h2 style="text-align:center;margin-bottom:5px;color:var(--primary)"> Desain Lencana Baru</h2>
             <p style="text-align:center;color:var(--text-secondary);margin-bottom:25px">Buat lencana custom untuk dikirim ke tim</p>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px">
                 <div>
@@ -482,31 +482,31 @@
                     <div class="form-group">
                         <label>Pilih Emoji</label>
                         <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:10px">
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
                             <button onclick="selectEmoji('?')" class="emoji-btn">?</button>
-                            <button onclick="selectEmoji('???')" class="emoji-btn">???</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
                             <button onclick="selectEmoji('?')" class="emoji-btn">?</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('??')" class="emoji-btn">??</button>
-                            <button onclick="selectEmoji('???')" class="emoji-btn">???</button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('?')" class="emoji-btn">?</button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('')" class="emoji-btn"></button>
+                            <button onclick="selectEmoji('?')" class="emoji-btn">?</button>
                         </div>
                         <input type="text" id="badgeEmojiInput" placeholder="Atau ketik emoji sendiri..." oninput="updateBadgePreview()">
                     </div>
                     <div class="form-group">
                         <label>ATAU Upload Foto Lencana</label>
                         <div class="logo-upload-area" onclick="document.getElementById('badgePhotoInput').click()" style="padding:15px">
-                            <p style="color:var(--primary);font-weight:700;margin:0;font-size:.9rem">?? Klik untuk upload foto (max 1MB)</p>
+                            <p style="color:var(--primary);font-weight:700;margin:0;font-size:.9rem"> Klik untuk upload foto (max 1MB)</p>
                         </div>
                         <input type="file" id="badgePhotoInput" accept="image/*" style="display:none" onchange="previewBadgePhoto(event)">
                         <div id="badgePhotoPreviewBox" style="display:none;margin-top:10px;text-align:center">
@@ -531,16 +531,16 @@
                     </div>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:center;padding-top:20px">
-                    <div style="font-weight:700;color:var(--text-primary);margin-bottom:20px;font-size:1rem">??? Preview Lencana</div>
-                    <div id="badgePreviewLarge" style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#ffd700,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:3rem;margin-bottom:12px;border:4px solid rgba(255,255,255,.4);box-shadow:0 8px 25px rgba(0,0,0,.25);overflow:hidden">??</div>
+                    <div style="font-weight:700;color:var(--text-primary);margin-bottom:20px;font-size:1rem">? Preview Lencana</div>
+                    <div id="badgePreviewLarge" style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#ffd700,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:3rem;margin-bottom:12px;border:4px solid rgba(255,255,255,.4);box-shadow:0 8px 25px rgba(0,0,0,.25);overflow:hidden"></div>
                     <div id="badgePreviewName" style="font-weight:700;color:var(--text-primary);font-size:1rem;text-align:center;margin-bottom:30px;min-height:24px">Nama Lencana</div>
                     <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:10px">Preview di leaderboard:</div>
                     <div style="display:flex;align-items:center;gap:10px;background:var(--bg-main);padding:12px 18px;border-radius:12px;border:2px solid var(--border-color)">
-                        <div id="badgePreviewSmall" style="width:35px;height:35px;border-radius:50%;background:linear-gradient(135deg,#ffd700,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:1.1rem;overflow:hidden">??</div>
+                        <div id="badgePreviewSmall" style="width:35px;height:35px;border-radius:50%;background:linear-gradient(135deg,#ffd700,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:1.1rem;overflow:hidden"></div>
                         <span style="color:var(--text-primary);font-size:.9rem;font-weight:600" id="badgePreviewNameSmall">Nama Lencana</span>
                     </div>
                     <div style="margin-top:20px;padding:15px;background:var(--bg-main);border-radius:12px;border:2px dashed var(--border-color);width:100%;font-size:.85rem;color:var(--text-secondary)">
-                        ?? <strong>Tips:</strong><br> Emoji untuk lencana ringan<br> Foto untuk lencana spesial<br> Pilih warna yang kontras
+                         <strong>Tips:</strong><br>• Emoji untuk lencana ringan<br>• Foto untuk lencana spesial<br>• Pilih warna yang kontras
                     </div>
                 </div>
             </div>
@@ -554,7 +554,7 @@
     <div id="daftarLencanaModal" class="modal-overlay">
         <div class="modal-content modal-large" style="max-width:700px">
             <button class="close-btn" onclick="closeModal('daftarLencanaModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:5px;color:var(--primary)">?? Daftar Lencana Custom</h2>
+            <h2 style="text-align:center;margin-bottom:5px;color:var(--primary)"> Daftar Lencana Custom</h2>
             <p style="text-align:center;color:var(--text-secondary);margin-bottom:20px">Semua lencana yang sudah dibuat admin</p>
             <button onclick="openDesainLencana()" class="btn-full" style="margin-bottom:20px;margin-top:0">? Buat Lencana Baru</button>
             <div id="daftarLencanaList"></div>
@@ -565,7 +565,7 @@
     <div id="deleteTeamModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('deleteTeamModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:20px;color:var(--danger)">??? Hapus Tim</h2>
+            <h2 style="text-align:center;margin-bottom:20px;color:var(--danger)">? Hapus Tim</h2>
             <div id="deleteTeamList" style="max-height:400px;overflow-y:auto"></div>
         </div>
     </div>
@@ -574,7 +574,7 @@
     <div id="deleteUserModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('deleteUserModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:20px;color:var(--danger)">?? Hapus User</h2>
+            <h2 style="text-align:center;margin-bottom:20px;color:var(--danger)"> Hapus User</h2>
             <div id="deleteUserList" style="max-height:400px;overflow-y:auto"></div>
         </div>
     </div>
@@ -583,7 +583,7 @@
     <div id="deletePostModal" class="modal-overlay">
         <div class="modal-content modal-large">
             <button class="close-btn" onclick="closeModal('deletePostModal')">&times;</button>
-            <h2 style="text-align:center;margin-bottom:20px;color:var(--danger)">?? Hapus Postingan</h2>
+            <h2 style="text-align:center;margin-bottom:20px;color:var(--danger)"> Hapus Postingan</h2>
             <div id="deletePostList" style="max-height:450px;overflow-y:auto"></div>
         </div>
     </div>
@@ -619,7 +619,7 @@ let tempRegData          = {};
 let selectedTeamId       = null;
 let currentBadgeDesign   = {
     id: null, name: '',
-    emoji: '??', photo: null,
+    emoji: '', photo: null,
     color: 'linear-gradient(135deg,#ffd700,#ff8c00)'
 };
 
@@ -727,7 +727,7 @@ function toggleTheme() {
 }
 function applyTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    document.getElementById('themeToggle').innerHTML = currentTheme === 'light' ? '??' : '??';
+    document.getElementById('themeToggle').innerHTML = currentTheme === 'light' ? '' : '';
     if (statsChart) { statsChart.destroy(); initChart(); }
 }
 function checkLoginAction()  { currentUser ? openUserProfile() : openModal('loginModal'); }
@@ -750,10 +750,10 @@ function getTimeAgo(ts) {
 // ============================================
 function getBadgeIcon(b) {
     const standard = {
-        members:     '<span class="badge-icon" style="background:linear-gradient(135deg,#ff9800,#f57c00)" title="Anggota Terbanyak">??</span>',
+        members:     '<span class="badge-icon" style="background:linear-gradient(135deg,#ff9800,#f57c00)" title="Anggota Terbanyak"></span>',
         active:      '<span class="badge-icon" style="background:linear-gradient(135deg,#4caf50,#388e3c)" title="Tim Teraktif">?</span>',
-        creative:    '<span class="badge-icon" style="background:linear-gradient(135deg,#9c27b0,#7b1fa2)" title="Tim Terkreatif">??</span>',
-        achievement: '<span class="badge-icon" style="background:linear-gradient(135deg,#f44336,#d32f2f)" title="Tim Terprestasi">??</span>'
+        creative:    '<span class="badge-icon" style="background:linear-gradient(135deg,#9c27b0,#7b1fa2)" title="Tim Terkreatif"></span>',
+        achievement: '<span class="badge-icon" style="background:linear-gradient(135deg,#f44336,#d32f2f)" title="Tim Terprestasi"></span>'
     };
     if (standard[b]) return standard[b];
     if (b && b.startsWith('custom_')) {
@@ -761,7 +761,7 @@ function getBadgeIcon(b) {
         if (custom) {
             const content = custom.photo
                 ? `<img src="${custom.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`
-                : (custom.emoji || '??');
+                : (custom.emoji || '');
             const bg = custom.photo ? '#f5f5f5' : (custom.color || 'linear-gradient(135deg,#ffd700,#ff8c00)');
             return `<span class="badge-icon" style="background:${bg}" title="${custom.name}">${content}</span>`;
         }
@@ -832,7 +832,7 @@ function updateNavState() {
     if (currentUser) {
         document.getElementById('navGuest').style.display  = 'none';
         document.getElementById('navUser').style.display   = 'block';
-        document.getElementById('navUserName').innerText   = currentUser.isAdmin ? '????? ADMIN' : currentUser.name.split(' ')[0];
+        document.getElementById('navUserName').innerText   = currentUser.isAdmin ? '? ADMIN' : currentUser.name.split(' ')[0];
         document.getElementById('userPillBtn').className   = currentUser.isAdmin ? 'user-pill admin-pill' : 'user-pill';
     } else {
         document.getElementById('navGuest').style.display = 'flex';
@@ -905,7 +905,7 @@ async function goToJoinList() {
                  onmouseout="this.style.background='transparent'"
                  onclick="selectTeam(${t.id},this)">
                 <div style="font-weight:700">${t.name}</div>
-                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus}  ${t.points} poin  ${members.length} anggota</div>
+                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus} • ${t.points} poin • ${members.length} anggota</div>
             </div>`;
     });
     if (!data?.length) container.innerHTML = '<p style="text-align:center;padding:20px;color:var(--text-secondary)">Belum ada tim tersedia</p>';
@@ -986,7 +986,7 @@ function renderTables() {
     const teamBody = document.getElementById('teamTableBody');
     teamBody.innerHTML = '';
     sorted.forEach((t, i) => {
-        const medal  = i===0?'??':i===1?'??':i===2?'??':(i+1);
+        const medal  = i===0?'':i===1?'':i===2?'':(i+1);
         const badges = (t.badges||[]).map(b => getBadgeIcon(b)).join('') || '<span style="color:var(--text-secondary)">-</span>';
         teamBody.innerHTML += `
             <tr>
@@ -1127,7 +1127,7 @@ function renderFeed() {
     if (!allPosts.length) {
         container.innerHTML = `
             <div style="text-align:center;padding:60px;color:var(--text-secondary)">
-                <p style="font-size:4rem">??</p>
+                <p style="font-size:4rem"></p>
                 <p style="font-size:1.2rem;margin-top:10px">Belum ada postingan</p>
                 <p style="font-size:.9rem;margin-top:5px">Jadilah yang pertama berbagi karya!</p>
             </div>`;
@@ -1149,18 +1149,18 @@ function createPostCard(post) {
             <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--primary),#667eea);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;flex-shrink:0">${av}</div>
             <div class="post-user-info">
                 <div class="post-user-name">${post.author_name}</div>
-                <div class="post-user-meta">${post.author_team}  ${getTimeAgo(post.timestamp)}</div>
+                <div class="post-user-meta">${post.author_team} • ${getTimeAgo(post.timestamp)}</div>
             </div>
-            ${canDelete ? `<button class="post-delete-btn" onclick="deletePost(${post.id})">??? Hapus</button>` : ''}
+            ${canDelete ? `<button class="post-delete-btn" onclick="deletePost(${post.id})">? Hapus</button>` : ''}
         </div>
         ${post.content ? `<div class="post-content">${post.content}</div>` : ''}
         ${post.image  ? `<img src="${post.image}" class="post-image" onclick="viewImage('${post.image}')" alt="Post Image">` : ''}
         <div class="post-actions">
             <button class="post-action-btn ${isLiked?'liked':''}" onclick="toggleLike(${post.id})">
-                ${isLiked?'??':'??'} <span id="likeCount_${post.id}">${post.likes?.length||0}</span> Suka
+                ${isLiked?'':''} <span id="likeCount_${post.id}">${post.likes?.length||0}</span> Suka
             </button>
             <button class="post-action-btn" onclick="toggleComments(${post.id})">
-                ?? <span id="commentCount_${post.id}">${post.comments?.length||0}</span> Komentar
+                 <span id="commentCount_${post.id}">${post.comments?.length||0}</span> Komentar
             </button>
         </div>
         <div id="comments_${post.id}" style="display:none;margin-top:18px;padding-top:18px;border-top:2px solid var(--border-color)">
@@ -1197,7 +1197,7 @@ async function toggleLike(postId) {
     const isLiked = likes.includes(currentUser.nim);
     const btn = document.querySelector(`#post_${postId} .post-action-btn`);
     btn.className = 'post-action-btn' + (isLiked ? ' liked' : '');
-    btn.innerHTML = `${isLiked?'??':'??'} <span id="likeCount_${postId}">${likes.length}</span> Suka`;
+    btn.innerHTML = `${isLiked?'':''} <span id="likeCount_${postId}">${likes.length}</span> Suka`;
 }
 
 function toggleComments(postId) {
@@ -1226,7 +1226,7 @@ function renderComments(postId) {
                     <div style="color:var(--text-primary);line-height:1.6;margin-top:3px">${c.text}</div>
                     <div style="display:flex;gap:15px;margin-top:6px;align-items:center">
                         <span style="font-size:.75rem;color:var(--text-secondary)">${getTimeAgo(c.timestamp)}</span>
-                        ${currentUser&&!currentUser.isAdmin?`<button onclick="toggleReply(${postId},${ci})" style="background:none;border:none;color:var(--primary);cursor:pointer;font-size:.8rem;font-weight:700">?? Balas</button>`:''}
+                        ${currentUser&&!currentUser.isAdmin?`<button onclick="toggleReply(${postId},${ci})" style="background:none;border:none;color:var(--primary);cursor:pointer;font-size:.8rem;font-weight:700"> Balas</button>`:''}
                     </div>
                     <div id="replyForm_${postId}_${ci}" style="display:none;margin-top:8px">
                         <div style="display:flex;gap:8px">
@@ -1362,7 +1362,7 @@ async function openTeamDetail(teamId) {
 
     if (isLeader) {
         logoEl.style.cssText = 'width:120px;height:120px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 15px;font-weight:700;overflow:hidden;cursor:pointer;border:4px solid var(--gold);box-shadow:0 0 20px rgba(255,215,0,.35)';
-        logoEl.title   = '?? Klik untuk pengaturan tim';
+        logoEl.title   = ' Klik untuk pengaturan tim';
         logoEl.onclick = openTeamSettings;
     } else {
         logoEl.style.cssText = 'width:120px;height:120px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 15px;font-weight:700;overflow:hidden';
@@ -1397,7 +1397,7 @@ async function openTeamDetail(teamId) {
 
 function updateJoinButton(team) {
     const isMember = currentUser && !currentUser.isAdmin && currentUser.teams?.includes(team.name);
-    document.getElementById('joinBtnText').innerText        = isMember ? '?? Buka Chat' : '?? Bergabung';
+    document.getElementById('joinBtnText').innerText        = isMember ? ' Buka Chat' : ' Bergabung';
     document.getElementById('joinOrChatBtn').style.background = isMember ? 'var(--primary)' : 'var(--success)';
     document.getElementById('leaveTeamBtn').style.display   = isMember ? 'flex' : 'none';
 }
@@ -1433,7 +1433,7 @@ async function leaveTeam() {
     if (!team) return;
     const isLeader = currentUser.team_roles?.[team.name] === 'Ketua';
     const msg      = isLeader
-        ? `?? KELUAR dari "${team.name}"?\nAnda adalah KETUA tim ini!\nTidak bisa dibatalkan!`
+        ? ` KELUAR dari "${team.name}"?\nAnda adalah KETUA tim ini!\nTidak bisa dibatalkan!`
         : `Keluar dari tim "${team.name}"?`;
     if (!confirm(msg)) return;
     showLoading();
@@ -1464,7 +1464,7 @@ function renderTeamMembers(teamName) {
             <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px dotted var(--border-color)">
                 <div>
                     <span style="color:var(--text-primary);font-weight:600">${m.name}</span>${isSelf}
-                    <div style="font-size:.8rem;color:var(--text-secondary);margin-top:2px">NIM: ${m.nim}  ${m.points} poin</div>
+                    <div style="font-size:.8rem;color:var(--text-secondary);margin-top:2px">NIM: ${m.nim} • ${m.points} poin</div>
                 </div>
                 <span class="${role==='Ketua'?'role-ketua':'role-anggota'}">${role}</span>
             </div>`;
@@ -1522,7 +1522,7 @@ async function loadChatMessages(teamName, silent = false) {
     const messages  = data || [];
     const container = document.getElementById('chatMessages');
     if (!messages.length) {
-        container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-secondary)"><p style="font-size:2rem">??</p><p style="margin-top:8px">Belum ada pesan. Mulai percakapan!</p></div>';
+        container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-secondary)"><p style="font-size:2rem"></p><p style="margin-top:8px">Belum ada pesan. Mulai percakapan!</p></div>';
         return;
     }
     const prevScroll = container.scrollTop;
@@ -1592,13 +1592,13 @@ function openTeamSettings() {
     badgesList.innerHTML = '';
     const available = team.available_badges || [];
     if (!available.length) {
-        badgesList.innerHTML = '<p style="color:var(--text-secondary);padding:10px;font-size:.9rem">?? Belum ada lencana dari admin. Minta admin kirim lencana terlebih dahulu.</p>';
+        badgesList.innerHTML = '<p style="color:var(--text-secondary);padding:10px;font-size:.9rem"> Belum ada lencana dari admin. Minta admin kirim lencana terlebih dahulu.</p>';
     } else {
         const standardNames = {
-            members:     '?? Anggota Terbanyak',
+            members:     ' Anggota Terbanyak',
             active:      '? Tim Teraktif',
-            creative:    '?? Tim Terkreatif',
-            achievement: '?? Tim Terprestasi'
+            creative:    ' Tim Terkreatif',
+            achievement: ' Tim Terprestasi'
         };
         available.forEach(bid => {
             const isActive = team.badges?.includes(bid);
@@ -1606,7 +1606,7 @@ function openTeamSettings() {
             if (!badgeName) {
                 const cb = allCustomBadges.find(b => b.badge_id === bid);
                 if (cb) {
-                    const icon = cb.photo ? '???' : (cb.emoji || '??');
+                    const icon = cb.photo ? '?' : (cb.emoji || '');
                     badgeName  = icon + ' ' + cb.name;
                 }
             }
@@ -1727,7 +1727,7 @@ function loadManageInterface() {
             } else {
                 actDiv.innerHTML = `
                     <button onclick="changeMemberRole('${member.nim}','Ketua')" style="padding:7px 12px;border:none;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;background:var(--success);color:#fff">? Ketua</button>
-                    <button onclick="kickMember('${member.nim}')" style="padding:7px 12px;border:none;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;background:var(--danger);color:#fff">?? Keluarkan</button>`;
+                    <button onclick="kickMember('${member.nim}')" style="padding:7px 12px;border:none;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;background:var(--danger);color:#fff"> Keluarkan</button>`;
             }
         }
     });
@@ -1738,7 +1738,7 @@ async function changeMemberRole(nim, newRole) {
     const member = allUsers.find(u => u.nim === nim);
     if (!team || !member) return;
     if (newRole === 'Ketua') {
-        if (!confirm(`Jadikan ${member.name} sebagai Ketua?\n\n?? Anda akan otomatis menjadi Anggota biasa!`)) return;
+        if (!confirm(`Jadikan ${member.name} sebagai Ketua?\n\n Anda akan otomatis menjadi Anggota biasa!`)) return;
         const oldLeader = allUsers.find(u => u.teams?.includes(team.name) && u.team_roles?.[team.name] === 'Ketua');
         if (oldLeader) {
             const lr = { ...oldLeader.team_roles, [team.name]: 'Anggota' };
@@ -1762,7 +1762,7 @@ async function kickMember(nim) {
     const team   = allTeams.find(t => t.id === currentViewingTeamId);
     const member = allUsers.find(u => u.nim === nim);
     if (!team || !member) return;
-    if (!confirm(`?? KELUARKAN "${member.name}" dari tim "${team.name}"?\n\nTindakan ini tidak bisa dibatalkan!`)) return;
+    if (!confirm(` KELUARKAN "${member.name}" dari tim "${team.name}"?\n\nTindakan ini tidak bisa dibatalkan!`)) return;
     showLoading();
     try {
         const newTeams = member.teams.filter(t => t !== team.name);
@@ -2018,17 +2018,17 @@ async function adminAddBadge() {
     const badgeSel = document.getElementById('badgeTypeSelect');
     badgeSel.innerHTML = `
         <option value="">-- Pilih Lencana --</option>
-        <optgroup label="?? Lencana Standar">
-            <option value="members">?? Anggota Terbanyak</option>
+        <optgroup label=" Lencana Standar">
+            <option value="members"> Anggota Terbanyak</option>
             <option value="active">? Tim Teraktif</option>
-            <option value="creative">?? Tim Terkreatif</option>
-            <option value="achievement">?? Tim Terprestasi</option>
+            <option value="creative"> Tim Terkreatif</option>
+            <option value="achievement"> Tim Terprestasi</option>
         </optgroup>`;
 
     if (allCustomBadges.length > 0) {
-        badgeSel.innerHTML += `<optgroup label="?? Lencana Custom">`;
+        badgeSel.innerHTML += `<optgroup label=" Lencana Custom">`;
         allCustomBadges.forEach(b => {
-            const icon = b.photo ? '???' : (b.emoji || '??');
+            const icon = b.photo ? '?' : (b.emoji || '');
             badgeSel.innerHTML += `<option value="${b.badge_id}">${icon} ${b.name}</option>`;
         });
         badgeSel.innerHTML += `</optgroup>`;
@@ -2047,10 +2047,10 @@ function updateBadgeSendPreview(badgeId) {
 
     box.style.display = 'block';
     const standardIcons = {
-        members:     { icon:'??', color:'linear-gradient(135deg,#ff9800,#f57c00)', name:'Anggota Terbanyak' },
+        members:     { icon:'', color:'linear-gradient(135deg,#ff9800,#f57c00)', name:'Anggota Terbanyak' },
         active:      { icon:'?', color:'linear-gradient(135deg,#4caf50,#388e3c)', name:'Tim Teraktif' },
-        creative:    { icon:'??', color:'linear-gradient(135deg,#9c27b0,#7b1fa2)', name:'Tim Terkreatif' },
-        achievement: { icon:'??', color:'linear-gradient(135deg,#f44336,#d32f2f)', name:'Tim Terprestasi' }
+        creative:    { icon:'', color:'linear-gradient(135deg,#9c27b0,#7b1fa2)', name:'Tim Terkreatif' },
+        achievement: { icon:'', color:'linear-gradient(135deg,#f44336,#d32f2f)', name:'Tim Terprestasi' }
     };
     if (standardIcons[badgeId]) {
         const s = standardIcons[badgeId];
@@ -2061,7 +2061,7 @@ function updateBadgeSendPreview(badgeId) {
         const cb = allCustomBadges.find(b => b.badge_id === badgeId);
         if (cb) {
             prev.style.background = cb.photo ? '#f5f5f5' : (cb.color || 'linear-gradient(135deg,#ffd700,#ff8c00)');
-            prev.innerHTML = cb.photo ? `<img src="${cb.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">` : (cb.emoji || '??');
+            prev.innerHTML = cb.photo ? `<img src="${cb.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">` : (cb.emoji || '');
             name.innerText = cb.name;
         }
     }
@@ -2092,7 +2092,7 @@ async function submitAddBadge() {
 function openDesainLencana() {
     currentBadgeDesign = {
         id: null, name: '',
-        emoji: '??', photo: null,
+        emoji: '', photo: null,
         color: 'linear-gradient(135deg,#ffd700,#ff8c00)'
     };
     document.getElementById('badgeNameInput').value  = '';
@@ -2150,10 +2150,10 @@ function previewBadgePhoto(event) {
 
 function clearBadgePhoto() {
     currentBadgeDesign.photo = null;
-    currentBadgeDesign.emoji = '??';
+    currentBadgeDesign.emoji = '';
     document.getElementById('badgePhotoInput').value = '';
     document.getElementById('badgePhotoPreviewBox').style.display = 'none';
-    document.getElementById('badgeEmojiInput').value = '??';
+    document.getElementById('badgeEmojiInput').value = '';
     const firstEmoji = document.querySelector('.emoji-btn');
     if (firstEmoji) firstEmoji.classList.add('selected');
     updateBadgePreview();
@@ -2167,7 +2167,7 @@ function updateBadgePreview() {
     }
     const content = currentBadgeDesign.photo
         ? `<img src="${currentBadgeDesign.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`
-        : (currentBadgeDesign.emoji || '??');
+        : (currentBadgeDesign.emoji || '');
     const bg = currentBadgeDesign.photo ? '#f5f5f5' : currentBadgeDesign.color;
 
     const large = document.getElementById('badgePreviewLarge');
@@ -2195,7 +2195,7 @@ async function simpanDesainLencana() {
         const badgeData = {
             badge_id:   newId,
             name:       name,
-            emoji:      currentBadgeDesign.photo ? null : (currentBadgeDesign.emoji || '??'),
+            emoji:      currentBadgeDesign.photo ? null : (currentBadgeDesign.emoji || ''),
             photo:      currentBadgeDesign.photo || null,
             color:      currentBadgeDesign.color,
             created_at: Date.now()
@@ -2215,7 +2215,7 @@ async function simpanDesainLencana() {
         const newId    = 'custom_' + Date.now();
         const badgeData = {
             badge_id: newId, name,
-            emoji:    currentBadgeDesign.photo ? null : (currentBadgeDesign.emoji || '??'),
+            emoji:    currentBadgeDesign.photo ? null : (currentBadgeDesign.emoji || ''),
             photo:    currentBadgeDesign.photo || null,
             color:    currentBadgeDesign.color,
             created_at: Date.now()
@@ -2235,7 +2235,7 @@ async function lihatDaftarLencana() {
     container.innerHTML = '';
 
     if (!allCustomBadges.length) {
-        container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-secondary)"><p style="font-size:3rem">??</p><p style="margin-top:10px">Belum ada lencana custom.</p><p style="font-size:.9rem">Klik tombol di atas untuk membuat lencana baru.</p></div>';
+        container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-secondary)"><p style="font-size:3rem"></p><p style="margin-top:10px">Belum ada lencana custom.</p><p style="font-size:.9rem">Klik tombol di atas untuk membuat lencana baru.</p></div>';
         openModal('daftarLencanaModal');
         return;
     }
@@ -2243,7 +2243,7 @@ async function lihatDaftarLencana() {
     allCustomBadges.forEach(b => {
         const content = b.photo
             ? `<img src="${b.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`
-            : (b.emoji || '??');
+            : (b.emoji || '');
         const bg = b.photo ? '#f5f5f5' : (b.color || 'linear-gradient(135deg,#ffd700,#ff8c00)');
         const div = document.createElement('div');
         div.className = 'badge-card';
@@ -2254,7 +2254,7 @@ async function lihatDaftarLencana() {
                 <div style="font-size:.8rem;color:var(--text-secondary);margin-top:3px">ID: ${b.badge_id}</div>
                 <div style="font-size:.8rem;color:var(--text-secondary)">Dibuat: ${new Date(b.created_at).toLocaleDateString('id-ID')}</div>
             </div>
-            <button onclick="hapusLencanaCustom('${b.badge_id}')" style="background:var(--danger);color:#fff;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;font-weight:700;font-size:.85rem;flex-shrink:0">??? Hapus</button>`;
+            <button onclick="hapusLencanaCustom('${b.badge_id}')" style="background:var(--danger);color:#fff;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;font-weight:700;font-size:.85rem;flex-shrink:0">? Hapus</button>`;
         container.appendChild(div);
     });
     openModal('daftarLencanaModal');
@@ -2263,7 +2263,7 @@ async function lihatDaftarLencana() {
 async function hapusLencanaCustom(badgeId) {
     const badge = allCustomBadges.find(b => b.badge_id === badgeId);
     if (!badge) return;
-    if (!confirm(`?? HAPUS lencana "${badge.name}"?\n\nLencana akan dihapus dari semua tim yang memilikinya!\nTidak bisa dibatalkan!`)) return;
+    if (!confirm(` HAPUS lencana "${badge.name}"?\n\nLencana akan dihapus dari semua tim yang memilikinya!\nTidak bisa dibatalkan!`)) return;
     showLoading();
     try {
         await db.from('custom_badges').delete().eq('badge_id', badgeId);
@@ -2300,9 +2300,9 @@ async function adminDeleteTeam() {
         div.innerHTML = `
             <div>
                 <div style="font-weight:700;color:var(--text-primary)">${t.name}</div>
-                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus}  ${t.points} poin  ${members} anggota</div>
+                <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">${t.focus} • ${t.points} poin • ${members} anggota</div>
             </div>
-            <button onclick="confirmDeleteTeam(${t.id})" style="padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">??? Hapus</button>`;
+            <button onclick="confirmDeleteTeam(${t.id})" style="padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">? Hapus</button>`;
         container.appendChild(div);
     });
     openModal('deleteTeamModal');
@@ -2310,7 +2310,7 @@ async function adminDeleteTeam() {
 
 async function confirmDeleteTeam(teamId) {
     const team = allTeams.find(t => t.id === teamId);
-    if (!confirm(`?? HAPUS TIM "${team.name}"?\n\n${allUsers.filter(u=>u.teams?.includes(team.name)).length} anggota akan kehilangan tim ini!\nSemua chat tim juga akan dihapus!\nTidak bisa dibatalkan!`)) return;
+    if (!confirm(` HAPUS TIM "${team.name}"?\n\n${allUsers.filter(u=>u.teams?.includes(team.name)).length} anggota akan kehilangan tim ini!\nSemua chat tim juga akan dihapus!\nTidak bisa dibatalkan!`)) return;
     showLoading();
     try {
         const affected = allUsers.filter(u => u.teams?.includes(team.name));
@@ -2344,7 +2344,7 @@ async function adminDeleteUser() {
                 <div style="font-weight:700;color:var(--text-primary)">${u.name}</div>
                 <div style="font-size:.85rem;color:var(--text-secondary);margin-top:3px">NIM: ${u.nim} | Tim: ${(u.teams||[]).join(', ')||'-'} | ${u.points} poin</div>
             </div>
-            <button onclick="confirmDeleteUser('${u.nim}')" style="padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">??? Hapus</button>`;
+            <button onclick="confirmDeleteUser('${u.nim}')" style="padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">? Hapus</button>`;
         container.appendChild(div);
     });
     openModal('deleteUserModal');
@@ -2352,7 +2352,7 @@ async function adminDeleteUser() {
 
 async function confirmDeleteUser(nim) {
     const user = allUsers.find(u => u.nim === nim);
-    if (!confirm(`?? HAPUS AKUN "${user.name}" (NIM: ${user.nim})?\n\nData poin dan prestasi akan hilang!\nTidak bisa dibatalkan!`)) return;
+    if (!confirm(` HAPUS AKUN "${user.name}" (NIM: ${user.nim})?\n\nData poin dan prestasi akan hilang!\nTidak bisa dibatalkan!`)) return;
     showLoading();
     try {
         await db.from('users').delete().eq('nim', nim);
@@ -2378,11 +2378,11 @@ async function adminDeletePost() {
             <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
                 <div style="flex:1">
                     <div style="font-weight:700;color:var(--text-primary)">${p.author_name}</div>
-                    <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:8px">${p.author_team}  ${getTimeAgo(p.timestamp)}</div>
+                    <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:8px">${p.author_team} • ${getTimeAgo(p.timestamp)}</div>
                     <div style="color:var(--text-primary);font-size:.9rem;line-height:1.5">${p.content ? (p.content.length>100?p.content.substring(0,100)+'...':p.content) : '<em style="color:var(--text-secondary)">Hanya foto</em>'}</div>
-                    ${p.image?'<div style="margin-top:6px;font-size:.8rem;color:var(--primary)">?? Ada foto</div>':''}
+                    ${p.image?'<div style="margin-top:6px;font-size:.8rem;color:var(--primary)"> Ada foto</div>':''}
                 </div>
-                <button onclick="confirmDeletePost(${p.id})" style="padding:8px 14px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">???</button>
+                <button onclick="confirmDeletePost(${p.id})" style="padding:8px 14px;border:none;border-radius:8px;cursor:pointer;font-weight:700;background:var(--danger);color:#fff;flex-shrink:0">?</button>
             </div>`;
         container.appendChild(div);
     });
@@ -2440,5 +2440,4 @@ async function downloadExcelData() {
 window.onload = init;
     </script>
 </body>
-
 </html>
